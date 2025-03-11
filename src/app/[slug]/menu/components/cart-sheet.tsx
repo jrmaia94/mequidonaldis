@@ -9,11 +9,9 @@ const CartSheet = () => {
       <SheetHeader>
         <SheetTitle>Are you absolutely sure?</SheetTitle>
         <SheetDescription>
-          This action can not be undone. This will permanently delete your
-          account and remove your data from our servers..
         </SheetDescription>
       </SheetHeader>
-      {products.map((product, i) => <h1 key={i}>{product.name}</h1>)}
+      {products.map((product, i) => <h1 key={i}>{product.name} {product.quantity}</h1>)}
     </SheetContent>
   </Sheet>);
 }
