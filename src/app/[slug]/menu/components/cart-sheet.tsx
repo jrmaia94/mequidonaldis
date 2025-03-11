@@ -3,7 +3,7 @@ import { CartContext } from "../context/cart";
 import { useContext } from "react";
 
 const CartSheet = () => {
-  const { isOpen, toggleCart } = useContext(CartContext);
+  const { isOpen, toggleCart, products } = useContext(CartContext);
   return (<Sheet open={isOpen} onOpenChange={toggleCart}>
     <SheetContent>
       <SheetHeader>
@@ -13,6 +13,7 @@ const CartSheet = () => {
           account and remove your data from our servers..
         </SheetDescription>
       </SheetHeader>
+      {products.map((product, i) => <h1 key={i}>{product.name}</h1>)}
     </SheetContent>
   </Sheet>);
 }
