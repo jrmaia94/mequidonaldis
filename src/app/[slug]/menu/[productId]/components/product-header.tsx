@@ -13,7 +13,6 @@ interface ProductHeaderProps {
 
 const ProductHeader = ({ product }: ProductHeaderProps) => {
   const router = useRouter()
-
   const handleBackClick = () => {
     router.back();
   };

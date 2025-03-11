@@ -11,7 +11,7 @@ interface RestaurantHeaderProps {
 }
 
 const RestaurantHeader = ({ restaurant }: RestaurantHeaderProps) => {
-  const router = useRouter();
+  const router = useRouter();  
   const handleBackClick = () => {
     router.back();
   };
